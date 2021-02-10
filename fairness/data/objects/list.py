@@ -5,6 +5,7 @@ from fairness.data.objects.German import German
 from fairness.data.objects.PropublicaRecidivism import PropublicaRecidivism
 from fairness.data.objects.PropublicaViolentRecidivism import PropublicaViolentRecidivism
 from fairness.data.objects.TwoGaussians import TwoGaussians
+from fairness.data.objects.CovidCases import CovidCases 
 
 DATASETS = [
 
@@ -23,11 +24,14 @@ DATASETS = [
 #     sensitive_attr="sex-race")
 
 # Real datasets:
-    Ricci(),
-    Adult(),
-    German(),
-    PropublicaRecidivism(),
-    PropublicaViolentRecidivism()
+#    Ricci(),
+#    Adult(),
+#    German(),
+#    PropublicaRecidivism(),
+#    PropublicaViolentRecidivism(),
+
+# Covid data
+    CovidCases()
     ]
 
 

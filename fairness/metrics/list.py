@@ -1,6 +1,7 @@
 import numpy
 
 from fairness.metrics.Accuracy import Accuracy
+from fairness.metrics.AUC import AUC
 from fairness.metrics.BCR import BCR
 from fairness.metrics.CalibrationNeg import CalibrationNeg
 from fairness.metrics.CalibrationPos import CalibrationPos
@@ -18,7 +19,7 @@ from fairness.metrics.SensitiveMetric import SensitiveMetric
 from fairness.metrics.TNR import TNR
 from fairness.metrics.TPR import TPR
 
-METRICS = [ Accuracy(), TPR(), TNR(), BCR(), MCC(),        # accuracy metrics
+METRICS = [ Accuracy(), TPR(), TNR(), BCR(), MCC(), AUC(),       # accuracy metrics
             DIBinary(), DIAvgAll(), CV(),                  # fairness metrics
             SensitiveMetric(Accuracy), SensitiveMetric(TPR), SensitiveMetric(TNR),
             SensitiveMetric(FPR), SensitiveMetric(FNR),

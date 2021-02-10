@@ -15,21 +15,24 @@ from fairness.metrics.MCC import MCC
 
 
 ALGORITHMS = [
-   SVM(), GaussianNB(), LogisticRegression(), DecisionTree(),     # baseline
-   KamishimaAlgorithm(),                                          # Kamishima
-   CaldersAlgorithm(),                                            # Calders
-   ZafarAlgorithmBaseline(),                                      # Zafar
-   ZafarAlgorithmFairness(),
-   ZafarAlgorithmAccuracy(),
+#   SVM(), GaussianNB(), 
+#   LogisticRegression(), 
+   #DecisionTree(),     # baseline
+#   KamishimaAlgorithm(),                                          # Kamishima
+#   CaldersAlgorithm(),                                            # Calders
+#   ZafarAlgorithmBaseline(),                                      # Zafar
+#   ZafarAlgorithmFairness(),
+#   ZafarAlgorithmAccuracy(),
 #   SDBSVM(),                                                      # not yet confirmed to work
    ParamGridSearch(KamishimaAlgorithm(), Accuracy()),             # Kamishima params
    ParamGridSearch(KamishimaAlgorithm(), DIAvgAll()),
-   FeldmanAlgorithm(SVM()), FeldmanAlgorithm(GaussianNB()),       # Feldman
-   FeldmanAlgorithm(LogisticRegression()), FeldmanAlgorithm(DecisionTree()),
-   ParamGridSearch(FeldmanAlgorithm(SVM()), DIAvgAll()),          # Feldman params
-   ParamGridSearch(FeldmanAlgorithm(SVM()), Accuracy()),
-   ParamGridSearch(FeldmanAlgorithm(GaussianNB()), DIAvgAll()),
-   ParamGridSearch(FeldmanAlgorithm(GaussianNB()), Accuracy())
+#   FeldmanAlgorithm(SVM()), FeldmanAlgorithm(GaussianNB()),       # Feldman
+#   FeldmanAlgorithm(LogisticRegression()), 
+#   FeldmanAlgorithm(DecisionTree()),
+#   ParamGridSearch(FeldmanAlgorithm(SVM()), DIAvgAll()),          # Feldman params
+#   ParamGridSearch(FeldmanAlgorithm(SVM()), Accuracy()),
+#   ParamGridSearch(FeldmanAlgorithm(GaussianNB()), DIAvgAll()),
+#   ParamGridSearch(FeldmanAlgorithm(GaussianNB()), Accuracy())
 ]
 
 def add_algorithm(algorithm):
